@@ -13,7 +13,8 @@
  * Text Domain:       wb-quiz
  */
 function wpdocs_scripts_method() {
-    wp_enqueue_script( 'custom-script', plugins_url('acf-calculate-studio9') . '/asset/script.js', array( 'jquery' ) );
+    wp_enqueue_script( 'wordifyfa', plugins_url('acf-calculate-studio9') . '/asset/wordifyfa.js', array( 'jquery' ) );
+    wp_enqueue_script( 'acf-calculate-studio', plugins_url('acf-calculate-studio9') . '/asset/script.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_scripts_method' );
 ?>
