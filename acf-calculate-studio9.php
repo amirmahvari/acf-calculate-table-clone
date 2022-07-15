@@ -12,10 +12,9 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       wb-quiz
  */
-function wpdocs_scripts_method() {
+function acf_calculate_studio9_script() {
     wp_enqueue_script( 'wordifyfa', plugins_url('acf-calculate-studio9') . '/asset/wordifyfa.js', array( 'jquery' ) );
     wp_enqueue_script( 'acf-calculate-studio', plugins_url('acf-calculate-studio9') . '/asset/script.js', array( 'jquery' ) );
 }
-add_action( 'wp_enqueue_scripts', 'wpdocs_scripts_method' );
-?>
+add_action( 'wp_enqueue_scripts', 'acf_calculate_studio9_script' );
 
