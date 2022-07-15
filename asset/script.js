@@ -38,6 +38,9 @@ jQuery(document).ready(function () {
     jQuery(document).on('keyup', '.acf-total-alpha input',function () {
         sum()
     })
+    jQuery(document).on('change', '.acf-status input',function () {
+        sum()
+    })
 
     function calculate(el) {
         let price = el.parents('tr').find('.acf-tr-service-price input').val()
@@ -53,19 +56,29 @@ jQuery(document).ready(function () {
         jQuery('.acf-tr-service-total input').each(function () {
             sum += +jQuery(this).val();
         })
-        let prepayment = jQuery('.acf-prepayment input');
-        let percent = jQuery('.acf-discount-percent input');
-        let fixed = jQuery('.acf-discount-fixed input');
-        let tax = jQuery('.acf-tax input');
-        let taxAdded = jQuery('.acf-tax-added input');
         let total = jQuery('.acf-total input');
         let totalAlpha = jQuery('.acf-total-alpha input');
         let final=sum;
-        final += (tax.val() / 100) * sum
-        final += (taxAdded.val() / 100) * sum
-        final -= (percent.val() / 100) * final
-        final -= fixed.val()
-        final -= prepayment.val()
+        if (!jQuery('.acf-tax').hasClass('acf-hidden')) {
+            let tax = jQuery('.acf-tax input');
+            final += (tax.val() / 100) * sum
+        }
+        if (!jQuery('.acf-tax-added').hasClass('acf-hidden')) {
+            let taxAdded = jQuery('.acf-tax-added input');
+            final += (taxAdded.val() / 100) * sum
+        }
+        if (!jQuery('.acf-discount-percent').hasClass('acf-hidden')) {
+            let percent = jQuery('.acf-discount-percent input');
+            final -= (percent.val() / 100) * final
+        }
+        if (!jQuery('.acf-discount-fixed').hasClass('acf-hidden')) {
+            let fixed = jQuery('.acf-discount-fixed input');
+            final -= fixed.val()
+        }
+        if (!jQuery('.acf-prepayment').hasClass('acf-hidden')) {
+            let prepayment = jQuery('.acf-prepayment input');
+            final -= prepayment.val()
+        }
         total.val(final)
         totalAlpha.val(wordifyRialsInTomans(final * 10))
     }
