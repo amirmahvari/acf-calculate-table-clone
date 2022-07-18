@@ -2,14 +2,14 @@ jQuery(document).ready(function () {
     jQuery(document).on('change', '.acf-subservice ul li input',function () {
         let el = jQuery(this)
         let parent = el.parents('.acf-subservice').data('conditions')
-        // if (el.is(':checked')){
+        if (el.is(':checked')){
             jQuery('.acf-button.button.button-primary').trigger('click')
             let elRow = jQuery('.acf-repeater tr.acf-row')
             elRow.eq(elRow.length - 2).find('.acf-tr-text-subservice input').val(el.parents('label').text())
             elRow.eq(elRow.length - 2).find('.acf-tr-text-service input').val(parent[0][0].value)
             elRow.eq(elRow.length - 2).find('.acf-tr-service-price input').val(el.val())
             calculate(elRow.eq(elRow.length - 2))
-        // }
+        }
     })
     jQuery(document).on('click', '.acf-tr-service select',function () {
         let el = jQuery(this);
