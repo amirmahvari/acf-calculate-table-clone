@@ -53,7 +53,12 @@ jQuery(document).ready(function () {
     jQuery(document).on('change', '.acf-status input',function () {
         sum()
     })
-
+    jQuery(document).on('keyup',   '.acf-changer input',function () {
+        let el = jQuery(this)
+        if (!el.value){
+            jQuery('.acf-items-changer input').prop('checked',false)
+        }
+    })
     function calculate(el) {
         let price = el.parents('tr').find('.acf-tr-service-price input').val()
         price = price.replace(/,/g, "")

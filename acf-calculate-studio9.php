@@ -17,4 +17,5 @@ function acf_calculate_studio9_script() {
     wp_enqueue_script( 'acf-calculate-studio', plugins_url('acf-calculate-studio9') . '/asset/script.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'acf_calculate_studio9_script' );
+add_action( 'admin_enqueue_scripts', 'acf_calculate_studio9_script' );
 
