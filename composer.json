@@ -1,0 +1,17 @@
+{
+    "name": "amirmahvari/acf-studio9",
+    "autoload": {
+        "psr-4": {
+            "Amirmahvari\\AcfStudio9\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Amir Abbas",
+            "email": "amirabbas750@gmail.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.1"
+    }
+}

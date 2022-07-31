@@ -14,6 +14,7 @@
  * Text Domain:       wb-quiz
  */
 require_once(ABSPATH . '/wp-admin/includes/plugin.php');
+require_once('vendor/autoload.php');
 function acf_calculate_studio9_script()
 {
     wp_enqueue_script('wordifyfa' , plugins_url('acf-calculate-studio9') . '/asset/wordifyfa.js' , ['jquery']);
@@ -25,6 +26,9 @@ add_action('admin_enqueue_scripts' , 'acf_calculate_studio9_script');
 add_action('acf_frontend/after_form' , function($post)
 {
     ?>
+        <div>
+
+        </div>
     <button type="button" class=" button" data-state="publish" onclick="window.print()">Print</button>
     <?php
 });
