@@ -25,6 +25,7 @@ add_action('wp_enqueue_scripts' , 'acf_calculate_studio9_script');
 add_action('admin_enqueue_scripts' , 'acf_calculate_studio9_script');
 add_action('acf_frontend/after_form' , function($post)
 {
+    echo json_encode($post);
     ?>
         <div>
 
