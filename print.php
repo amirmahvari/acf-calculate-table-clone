@@ -24,13 +24,8 @@ $mpdf = new \Mpdf\Mpdf([
 ]);
 $mpdf->WriteHTML('
         
-        <!doctype html>
-<html lang="en" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>فاکتور خروجی</title>
     <style>
     @page {
@@ -72,22 +67,25 @@ $mpdf->WriteHTML('
     font-size: .3cm;
         }
         td, th {
-          border: 2px solid #000;
+          border: 1px solid #000;
           text-align: center;
         }
         tr:nth-child(even) {
-          border: 2px solid #000;
+          border: 1px solid #000;
+        }
+        .bg-gray{
+        background-color: #ececec;
         }
     </style>
 </head>
 <body>
 <div class="row">
     <div style="float: right;width: 65%">
-        <h1 class="text-lg" style="margin: 0;font-size: 18px">استودیو عکسبرداری و فیلمبرداری تخصصی ناین</h1>
+        <p class="text-lg" style="margin: 0;font-size: 18px">استودیو عکسبرداری و فیلمبرداری تخصصی ناین</p>
         <p class="text-left" style="margin: 0;font-size: 8px">عضو انجمن رسمی بنیاد ملی نخبگان کشور</p>
     </div>
     <div style="float: right;width: 35%">
-        <img src="asset/images/Header.jpg" width="500" alt="">
+        <img src="asset/images/Header.jpg" height="238" width="715" />
     </div>
 
 </div>
@@ -117,43 +115,61 @@ $mpdf->WriteHTML('
             آدرس : تهران - میدان شوش - خیابان صابونیان - پاساژ قصر بلور - طبقه هفتم
         </span>
     </div>
-    <div style="float: right;width: 30%;font-size:8px;">
-         <span style="float: right;font-size:10px;margin-left: 2px">
-         تلفن های : 0213335588
+    <div style="float: right;width: 30%;font-size:8px;margin-top:0.6cm">
+         <span style="float: right;font-size:10px;margin-left: 2px;">
+         تلفن های تماس : 0213335588
         </span>
     </div>
 </div>
 
 <div>
-<table border="1" cellspacing="0" width="100%">
-<tr>
-<td>ردیف</td>
-<td>کد</td>
-<td>شرح خدمات</td>
+<table border="1" cellspacing="0" width="100%" style="font-size: 10px">
+<tr class="bg-gray">
+<td width="5%">ردیف</td>
+<td width="5%">کد</td>
+<td width="40%">شرح خدمات</td>
 <td>تعداد</td>
 <td>واحد</td>
 <td>فی</td>
 <td>جمع کل</td>
 </tr>
 <tr>
-<td>ردیف</td>
-<td>کد</td>
-<td>شرح خدمات</td>
-<td>تعداد</td>
+<td>1</td>
+<td>5059</td>
+<td>طراحی وب سایت شرکتی تک زبانه شرکی</td>
+<td>۱</td>
+<td>عدد</td>
+<td>75.000.000</td>
+<td>75.000.000</td>
+</tr>
+<tr class="bg-gray">
+<td colspan="4" style="text-align: right">تعداد</td>
 <td>واحد</td>
 <td>فی</td>
 <td>جمع کل</td>
 </tr>
 <tr>
-<td>ردیف</td>
-<td>کد</td>
-<td>شرح خدمات</td>
-<td>تعداد</td>
-<td>واحد</td>
-<td>فی</td>
-<td>جمع کل</td>
-</tr>
+<td colspan="7" style="text-align: right;font-size: 10px">
+توضیحات‌ : 
+<ul >
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+<li>پرداخت وجه از طریق شماره کارت 5022-2910-7700-1764 و یا شماره شبا IR02-0570-3906-8000-0997-9660-01 بانک پاسارگاد بنام محمد امین ابوالقاسمی امکانپذیر می باشد.</li>
+</ul>
+</td>
 </table>
+<hr>
+<p class="text-lg" style="margin: 0;font-size: 15px;font-weight: 800">توضیحات کلی فاکتور</p>
+<ul style="font-size: 10px">
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+<li>اعتبار این پیش فاکتور از تاریخ صدور آن به مدت یک ماه می باشد.</li>
+</ul>
+<hr>
 </div>
 
 </body>
