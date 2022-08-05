@@ -1,17 +1,16 @@
+<?php
+/**
+ * Template Name: Print
+ */
+$submission = fea_instance()->submissions_handler->get_submission( 1 );
+$form = json_decode( acf_decrypt( $submission->fields ), true );
+
+?>
+
 <html lang="fa" dir="rtl">
 <head>
     <title>فاکتور خروجی</title>
     <style>
-        @page {
-            margin-top: 1cm;
-            margin-bottom: 0cm;
-            margin-left: 0.3cm;
-            margin-right: 0.3cm;
-            margin-header: 0.3cm;
-            margin-footer: 0.3cm;
-            header: page-header;
-            footer: page-footer;
-        }
         body {
             font-family: vazir;
             direction: rtl;
@@ -149,36 +148,3 @@
 </body>
 </html>
 
-<?php
-/*
-require_once __DIR__ . '/vendor/autoload.php';
-$defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
-$fontDirs = $defaultConfig['fontDir'];
-$defaultFontConfig = (new Mpdf\Config\FontVariables())->getDefaults();
-$fontData = $defaultFontConfig['fontdata'];
-$mpdf = new \Mpdf\Mpdf([
-    'format'       => 'A5' ,
-    'fontDir'      => array_merge($fontDirs , [
-        __DIR__ . '/asset' ,
-    ]) ,
-    'fontdata'     => $fontData + [
-            'vazir' => [
-                'R'          => 'font/Vazir.ttf' ,
-                'B'          => 'font/Vazir.ttf' ,
-                'I'          => 'font/Vazir.ttf' ,
-                'BI'         => 'font/Vazir.ttf' ,
-                'useOTL'     => 0xFF ,    // required for complicated langs like Persian, Arabic and Chinese
-                'useKashida' => 75 ,  // required for complicated langs like Persian, Arabic and Chinese
-            ] ,
-        ] ,
-    'default_font' => 'vazir' ,
-]);
-$mpdf->WriteHTML('
-
-
-');
-$mpdf->SetFooter('
-<img src="asset/images/Footer.jpg" width="900" height="39" alt="">
-');
-$mpdf->Output();
-*/?>

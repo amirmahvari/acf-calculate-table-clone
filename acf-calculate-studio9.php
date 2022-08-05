@@ -23,13 +23,17 @@ function acf_calculate_studio9_script()
 
 add_action('wp_enqueue_scripts' , 'acf_calculate_studio9_script');
 add_action('admin_enqueue_scripts' , 'acf_calculate_studio9_script');
+add_filter( 'page_template', function ( $page_template )
+{
+    if ( isset($_REQUEST['action']) and $_REQUEST['action']=='acf-print' and isset($_REQUEST['submission'])) {
+        $page_template = dirname( __FILE__ ) . '/page-template-print.php';
+    }
+    return $page_template;
+});
+
 add_action('acf_frontend/after_form' , function($post)
 {
-    echo json_encode($post);
     ?>
-        <div>
-
-        </div>
-    <button type="button" class=" button" data-state="publish" onclick="window.print()">Print</button>
+    <a class="button" href="/print">Print</a>
     <?php
 });
