@@ -34,6 +34,6 @@ add_filter( 'page_template', function ( $page_template )
 add_action('acf_frontend/after_form' , function($post)
 {
     ?>
-    <a class="button" href="/print">Print</a>
+    <a class="button" href="/wp-admin/admin.php?page=acf-frontend-submissions&action=edit&id=<?=$post['submission']?>&action=acf-print&submission=<?=$post['submission']?>">Print</a>
     <?php
 });
