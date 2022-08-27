@@ -349,10 +349,10 @@ $url=plugins_url('/acf-calculate-studio9/asset');
                     <td><?=$row['service'].':'.$row['sub_service'].' '.$row['description']?></td>
                     <td><?=$row['qty']?></td>
                     <td><?=$row['unit']?></td>
-                    <td><?=number_format($row['amout'])?></td>
+                    <td><?=number_format($row['amount'])?></td>
                     <td><?=number_format($row['total'])?></td>
                 </tr>
-            <?php
+                <?php
             }
             ?>
 

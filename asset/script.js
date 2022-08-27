@@ -5,6 +5,7 @@ jQuery(document).ready(function () {
         if (el.is(':checked')){
             jQuery('.acf-button.button.button-primary').trigger('click')
             let elRow = jQuery('.acf-repeater tr.acf-row')
+            console.log(el.parents('label').text())
             elRow.eq(elRow.length - 2).find('.acf-tr-text-subservice input').val(el.parents('label').text())
             elRow.eq(elRow.length - 2).find('.acf-tr-text-service input').val(parent[0][0].value)
             elRow.eq(elRow.length - 2).find('.acf-tr-service-price input').val(el.val())
@@ -14,19 +15,19 @@ jQuery(document).ready(function () {
     jQuery(document).on('click', '.acf-tr-service select',function () {
         let el = jQuery(this);
         el.parents('tr').find('.acf-tr-service-price input').val(el.val())
-        calculate(el)
+        calculate(el.parents('tr'))
     })
     jQuery(document).on('keyup', '.acf-tr-service-price input',function () {
         let el = jQuery(this);
-        calculate(el)
+        calculate(el.parents('tr'))
     })
     jQuery(document).on('keyup', '.acf-tr-service-quantity input',function () {
         let el = jQuery(this);
-        calculate(el)
+        calculate(el.parents('tr'))
     })
     jQuery(document).on('keyup', '.acf-tr-service-discount input',function () {
         let el = jQuery(this);
-        calculate(el)
+        calculate(el.parents('tr'))
     })
 
     jQuery(document).on('keyup', '.acf-prepayment input',function () {
@@ -60,14 +61,14 @@ jQuery(document).ready(function () {
         }
     })
     function calculate(el) {
-        let price = el.parents('tr').find('.acf-tr-service-price input').val()
+        let price = el.find('.acf-tr-service-price input').val()
         price = price.replace(/,/g, "")
-        let quantity = el.parents('tr').find('.acf-tr-service-quantity input').val()
+        let quantity = el.find('.acf-tr-service-quantity input').val()
         quantity = quantity.replace(/,/g, "")
-        let discount = el.parents('tr').find('.acf-tr-service-discount input').val()
+        let discount = el.find('.acf-tr-service-discount input').val()
         discount = discount.replace(/,/g, "")
         price = discount ? discount : price;
-        el.parents('tr').find('.acf-tr-service-total input').val(price * quantity)
+        el.find('.acf-tr-service-total input').val(price * quantity)
         sum()
     }
 
