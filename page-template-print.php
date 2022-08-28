@@ -267,11 +267,11 @@ $url=plugins_url('/acf-calculate-studio9/asset');
         }
 
         @page {
-            size: A5;
+            size: A4;
         }
     </style>
 </head>
-<body class="A5">
+<body class="A4">
 <div class="pdf">
     <header class="header mb-3">
         <div class="">
