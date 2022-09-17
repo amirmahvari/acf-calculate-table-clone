@@ -2,8 +2,8 @@
 
 add_action('admin_menu' , function()
 {
-    add_menu_page('فرم سازی acf استودیو 9' ,
-        'فرم سازی acf استودیو 9' ,
+    add_menu_page('تنظیمات استودیو 9' ,
+        'تنظیمات استودیو 9' ,
         'manage_options' ,
         'acf' ,
         'acf_studio9_setting' ,
