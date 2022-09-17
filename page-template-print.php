@@ -38,15 +38,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
             font-weight: normal;
             font-style: normal;
         }
-        @font-face {
-            font-family: Vazir;
-            src: url("<?=$url?>/font/Farsi-Digits/Vazir-FD.ttf");
-            src: url("<?=$url?>/font/Farsi-Digits/Vazir-FD.ttf") format("Vazir-opentype"),
-            url("<?=$url?>/font/Farsi-Digits/Vazir-FD.woff") format("woff"),
-            url("<?=$url?>/font/Farsi-Digits/Vazir-FD.ttf") format("truetype");
-            font-weight: normal;
-            font-style: normal;
-        }
+
 
         body {
             direction: rtl;
@@ -275,11 +267,11 @@ $url=plugins_url('/acf-calculate-studio9/asset');
 <div class="pdf">
     <header class="header mb-3">
         <div class="">
-            <h5 class="mb-1">استودیو عکسبرداری و فیلمبرداری تخصصی ناین</h5>
-            <p class="text-left text-10 font-medium mb-8">
+            <h4 class="mb-1">استودیو عکسبرداری و فیلمبرداری تخصصی ناین</h4>
+            <p class="text-left text-12 font-medium mb-8">
                 عضو انجمن رسمی بنیاد ملی نخبگان کشور
             </p>
-            <p class="font-medium text-14">لیست قیمت خدمات استودیو</p>
+            <p class="font-medium text-16">لیست قیمت خدمات استودیو</p>
         </div>
         <div class="text-12 font-medium">
             <img class="headerImg" src="<?=$url?>/images/Header.jpg" alt="" />
@@ -309,13 +301,13 @@ $url=plugins_url('/acf-calculate-studio9/asset');
                     <span><?=$form['record']['fields']['post']['post_title']['value']?> </span>
                 </h4>
 
-                <p class="mb-4 text-11">
+                <p class="mb-4 text-12">
                     آدرس:
                     <span><?=$form['record']['fields']['post']['address']['value']?></span
                     >
                 </p>
             </div>
-            <div class="br-2 py-1 pr-8 text-11">
+            <div class="br-2 py-1 pr-8 text-12">
                 <p>
                     تلفن های تماس :
                     <span><?=$form['record']['fields']['post']['mobile']['value']?></span>
@@ -370,7 +362,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
             </tr>
             </tfoot>
         </table>
-        <div class="table-caption text-10 font-semibold">
+<!--        <div class="table-caption text-10 font-semibold">
             <p>توضیحات :</p>
             <p>-اعتبار این پیش قاکتور از تاریخ صدور آن به مدت یک ماه میباشد .</p>
             <p class="mb-2">
@@ -378,7 +370,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
                 IR02-0570-3906-8000-0997-9660-01 بانک پاسارگاد بنام محمد امین
                 ابوالقاسمی امکانپذیر میباشد .
             </p>
-        </div>
+        </div>-->
 
         <div class="flex items-center my-4">
             <hr class="small-hr" />
@@ -387,62 +379,25 @@ $url=plugins_url('/acf-calculate-studio9/asset');
         </div>
     </main>
 
-    <div class="text-8 font-semibold mb-4">
+    <div class="text-12 font-semibold mb-4">
         <ul>
-            <li>
-                -کلیه قیمت های اعلام شده به ریال و بدون احتساب کسورات قانونی میباشد
-                (در صورت درخواست، مبلغ کسورات به جمع نهایی فاکتور اضافه میگردد)
-            </li>
-
-            <li>
-                - پرداخت 50 ٪ از مبلغ کل پیش فاکتور در زمان سفارش والباقی به صورت
-                نقدی در زمان تحویل نهایی سفارش الزامیست .(تحویل پروژه منوط به تسویه
-                کامل میباشد )
-            </li>
-            <li>
-                - سفارشاتی که بنا به درخواست کارفرما میبایست خارج از روال زمانی
-                استودیو انجام گردد شامل افزایش قیمت خواهند بود.
-            </li>
-            <li>
-                - زمان شروع پروژه پس از واریز مبلغ پیش پرداخت با توجه به ترافیک
-                موجود در استودیو بین 2 تا 7 روز کاری خواهد بود.
-            </li>
-            <li>
-                - تمامی فایل ها قبل از تایید نهایی وقبل از تسویه حساب همراه با
-                واترمارک به نمایش گذاشته می شود.
-            </li>
-            <li>
-                - هزینه های ایاب ذهاب گروه، حمل تجهیزات از آتلیه تا محل پروژه و داخل
-                پروژه و برگشت آن و نیز تهیه اقلام کاربردی در عکاسی
-                دکوراتیو(اکسسوری،میوه وشیرینی و...) به عهده کارفرما خواهد بود.
-            </li>
-            <li>
-                - انجام سفارش سه روز کاری پس از اتمام کامل پروژه آغاز شده و با توجه
-                به حجم پروژه آماده سازی به صورت متوالی انجام گردیده و تا پایان پروژه
-                ادامه خواهد داشت.
-            </li>
-
-            <li>
-                - هزینه اسکان وتامین وعده های غذایی گروه در پروژه های خارج از
-                استودیو به عهده کارفرما می باشد.
-            </li>
-            <li>
-                - مشکلات احتمالی در پروژه که از طرف کارفرما صورت پذیرد این مجموعه
-                هیچ مسئولیتی در قبال آن نخواهد داشت و انجام مجدد پروژه شامل هزینه
-                های اولیه خواهد بود.
-            </li>
-            <li>
-                - ارتباط مستقیم یک فرد تام الاختیار با گروه از ابتدا تا انتهای پروژه
-                الزامیست.
-            </li>
+            <?php
+            if(isset($form['record']['fields']['post']['description']['value']))
+            {
+                foreach($form['record']['fields']['post']['description']['value'] as $desc)
+                {
+                    echo "<li>-$desc</li>";
+                }
+            }
+            ?>
         </ul>
     </div>
 
     <hr class="long-hr mb-8" />
 
     <footer class="footer">
-        <p>نشانی دفتر مرکزی:</p>
-        <div class="flex items-center">
+        <p class=" text-14">نشانی دفتر مرکزی:</p>
+        <div class="flex items-center text-14">
             <p class="ml-4">تهران، ولنجک، خیابان شانزدهم، بوستان یک ،شماره 298</p>
             <p>
                 تلفن:
