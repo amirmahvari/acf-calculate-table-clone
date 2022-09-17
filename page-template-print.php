@@ -274,7 +274,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
             <p class="font-medium text-16">لیست قیمت خدمات استودیو</p>
         </div>
         <div class="text-12 font-medium">
-            <img class="headerImg" src="<?=$url?>/images/Header.jpg" alt="" />
+            <img class="headerImg" src="<?=wp_get_attachment_image_url(get_option( 'acf_header_image'),100)?>" alt="" />
             <div class="flex items-center justify-end">
                 <div class="px-2">
                     <p class="">
@@ -405,7 +405,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
             </p>
         </div>
     </footer>
-    <img src="<?=$url?>/images/Footer.svg" alt="" />
+    <img src="<?=wp_get_attachment_image_url(get_option( 'acf_footer_image'),100)?>" alt="" />
 </div>
 </body>
 </html>

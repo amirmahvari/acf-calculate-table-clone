@@ -51,3 +51,4 @@ add_action('acf_frontend/after_form' , function($post)
         <?php
     }
 });
+require_once 'admin-setting.php';
