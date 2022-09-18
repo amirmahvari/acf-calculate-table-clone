@@ -21,6 +21,48 @@ $url=plugins_url('/acf-calculate-studio9/asset');
     />
 
     <style>
+        .print-button {
+            cursor: pointer;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            border-radius: 5px;
+            background: none;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+
+            outline: none;
+            text-align: center;
+
+            padding: 8px 16px;
+            font-size: 12px;
+            font-size: 0.857rem;
+            line-height: 1.833;
+            font-weight: 700;
+            background-color: #0fabc6;
+            color: #fff;
+            border: 1px solid #0fabc6;
+        }
+
+        @media print {
+            .print-button {
+                display: none;
+                visibility: hidden;
+            }
+        }
         * {
             margin: 0;
             padding: 0;
@@ -265,6 +307,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
 </head>
 <body class="A4">
 <div class="pdf">
+    <button onclick="window.print()" class="print-button">پرینت</button>
     <header class="header mb-3">
         <div class="">
             <h4 class="mb-1">استودیو عکسبرداری و فیلمبرداری تخصصی ناین</h4>
@@ -405,7 +448,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
             </p>
         </div>
     </footer>
-    <img src="<?=wp_get_attachment_image_url(get_option( 'acf_footer_image'),100)?>" alt="" />
+    <img width="100%" style="position: absolute; bottom: 0" src="<?=wp_get_attachment_image_url(get_option( 'acf_footer_image'),100)?>" alt="" />
 </div>
 </body>
 </html>

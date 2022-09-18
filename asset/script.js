@@ -1,5 +1,5 @@
 jQuery(document).ready(function () {
-    jQuery(document).on('change', '.acf-subservice ul li input ,.acf-subservice .acf-button-group label input',function () {
+    jQuery(document).on('click', '.acf-subservice ul li input ,.acf-subservice .acf-button-group label input',function () {
         let el = jQuery(this)
         let parent = el.parents('.acf-subservice').data('conditions')
         if (el.is(':checked')){
