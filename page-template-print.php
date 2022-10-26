@@ -381,7 +381,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
                 <tr>
                     <td><?=$i?></td>
                     <td><?=$i?></td>
-                    <td><?=$row['service'].':'.$row['sub_service'].' '.$row['description']?></td>
+                    <td class="text-right"><?=$row['service'].':'.$row['sub_service'].' '.$row['description']?></td>
                     <td><?=$row['qty']?></td>
                     <td><?=$row['unit']?></td>
                     <td><?=number_format($row['amount'])?></td>
