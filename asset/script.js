@@ -5,7 +5,6 @@ jQuery(document).ready(function () {
         if (el.is(':checked')){
             jQuery('.acf-button.button.button-primary').trigger('click')
             let elRow = jQuery('.acf-repeater tr.acf-row')
-            console.log(el.parents('label').text())
             elRow.eq(elRow.length - 2).find('.acf-tr-text-subservice input').val(el.parents('label').text())
             elRow.eq(elRow.length - 2).find('.acf-tr-text-service input').val(parent[0][0].value)
             elRow.eq(elRow.length - 2).find('.acf-tr-service-price input').val(el.val())

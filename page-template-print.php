@@ -88,8 +88,8 @@ $url=plugins_url('/acf-calculate-studio9/asset');
             background-color: white !important;
         }
         .pdf {
-            margin-inline: 1rem;
-            margin-block: 1.5rem;
+            /*margin-inline: 1rem;*/
+            /*margin-block: 1.5rem;*/
         }
         .no-wrap {
             white-space: nowrap;
@@ -307,6 +307,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
 </head>
 <body class="A4">
 <div class="pdf">
+    <div style="margin: 1cm">
     <button onclick="window.print()" class="print-button">پرینت</button>
     <header class="header mb-3">
         <div class="">
@@ -361,8 +362,8 @@ $url=plugins_url('/acf-calculate-studio9/asset');
         <table class="w-full">
             <thead>
             <tr>
-                <th>ردیف</th>
-                <th>کد</th>
+                <th width="5%">ردیف</th>
+                <th width="5%">کد</th>
                 <th>شرح خدمات</th>
                 <th>تعداد</th>
                 <th>واحد</th>
@@ -381,7 +382,7 @@ $url=plugins_url('/acf-calculate-studio9/asset');
                 <tr>
                     <td><?=$i?></td>
                     <td><?=$i?></td>
-                    <td><?=$row['service'].':'.$row['sub_service'].' '.$row['description']?></td>
+                    <td class="text-right"><?=$row['service'].':'.$row['sub_service'].' '.$row['description']?></td>
                     <td><?=$row['qty']?></td>
                     <td><?=$row['unit']?></td>
                     <td><?=number_format($row['amount'])?></td>
@@ -436,11 +437,12 @@ $url=plugins_url('/acf-calculate-studio9/asset');
         </ul>
     </div>
 
+    </div>
     <hr class="long-hr mb-8" />
-
+    <div style="position: absolute; bottom: -10px">
     <footer class="footer">
         <p class=" text-14">نشانی دفتر مرکزی:</p>
-        <div class="flex items-center text-14">
+        <div class="flex items-center text-14 mt-2">
             <p class="ml-4">تهران، ولنجک، خیابان شانزدهم، بوستان یک ،شماره 298</p>
             <p>
                 تلفن:
@@ -448,7 +450,8 @@ $url=plugins_url('/acf-calculate-studio9/asset');
             </p>
         </div>
     </footer>
-    <img width="100%" style="position: absolute; bottom: 0" src="<?=wp_get_attachment_image_url(get_option( 'acf_footer_image'),100)?>" alt="" />
+    <img width="100%"  src="<?=wp_get_attachment_image_url(get_option( 'acf_footer_image'),100)?>" alt="" />
+    </div>
 </div>
 </body>
 </html>
