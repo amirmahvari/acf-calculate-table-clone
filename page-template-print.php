@@ -308,7 +308,6 @@ $url=plugins_url('/acf-calculate-studio9/asset');
 <body class="A4">
 <div class="pdf">
     <div style="margin: 1cm">
-    <button onclick="window.print()" class="print-button">پرینت</button>
     <header class="header mb-3">
         <div class="">
             <h4 class="mb-1">استودیو عکسبرداری و فیلمبرداری تخصصی ناین</h4>
@@ -453,6 +452,9 @@ $url=plugins_url('/acf-calculate-studio9/asset');
     <img width="100%"  src="<?=wp_get_attachment_image_url(get_option( 'acf_footer_image'),100)?>" alt="" />
     </div>
 </div>
+<script>
+    window.print()
+</script>
 </body>
 </html>
 
